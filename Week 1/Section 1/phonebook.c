@@ -6,7 +6,7 @@ int main(void)
     // Getting informations
     string name = get_string("Type a name: ");
     int age = get_int("Type an age: ");
-    int phone = get_int("Type a phone number: ");
+    string phone = get_string("Type a phone number: ");
     // Confirming informations
     printf("Name: %s\n", name);
     printf("Age: %i\n", age);
