@@ -4,21 +4,26 @@
 int main(void)
 {
     // Get the starting number
-    int starting = get_int("Starting number of llamas: ");
+    int starting;
+    do
+    {
+        starting = get_int("Starting number of llamas: ");
+    } while (starting < 9);
+    
     // Get the ending number
-    int ending = get_int("Ending number of llamas: ");
+    int ending;
+    do
+    {
+        ending = get_int("Ending number of llamas: ");
+    } while (ending <= starting);
+    
+    // Calculate the years
     float llamas = (float) starting;
     int years = 0;
     do
     {
-        float add = llamas / 3;
-        float remove = llamas / 4;
-        llamas += add;
-        llamas -= remove;
+        llamas += llamas / 12;
         years ++;
     } while (llamas < ending);
     printf("It will take %i years to get the goal!\n", years);
-    
-    
-    
 }
